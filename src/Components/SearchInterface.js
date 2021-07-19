@@ -12,7 +12,7 @@ export default class SearchInterface extends Component {
     const booksWithShelves = books!==undefined && !books.error && books 
     ? books.map(book => {
       if(this.props.books.some(b=>b.id === book.id)) {
-        book.shelf = this.props.books.includes(x=>x.id===book.id).shelf;
+        book.shelf = this.props.books.find(x=>x.id===book.id).shelf;
       }
       return book;
     })
