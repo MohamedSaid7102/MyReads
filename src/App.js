@@ -18,7 +18,7 @@ class BooksApp extends React.Component {
   }
 
   fetchBooks = async () => {
-      let res = await BooksAPI.getAll().then(res=>{
+      await BooksAPI.getAll().then(res=>{
         this.setState(()=>({
           books: res
         }))
